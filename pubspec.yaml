@@ -1,7 +1,7 @@
-name: animated_center_list
+name: animated_center_item_list_view
 description: A new Flutter project.
 version: 0.0.1
-homepage: https://github.com/ahmadhassan-dev/animated_center_list
+homepage: https://github.com/ahmadhassan-dev/animated_center_item_list_view
 
 environment:
   sdk: '>=3.1.5 <4.0.0'

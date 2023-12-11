@@ -34,7 +34,7 @@ Here's how you can integrate animated_center_list into your app:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:animated_center_list/animated_center_list.dart';
+import 'package:animated_center_list/animated_center_item_list_view.dart';
 
 void main() => runApp(MyApp());
 

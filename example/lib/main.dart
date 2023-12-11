@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:animated_center_list/animated_center_list.dart';
+import 'package:animated_center_list/animated_center_item_list_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: AnimatedCenterList(
+        body: AnimatedCenterItemListView(
             itemCount: 100, // Number of items in the list
             itemBuilder: (context, index, isCentered) {
               final opacity = isCentered ? 1.0 : 0.5;

@@ -1,4 +1,4 @@
-import 'package:animated_center_list/animated_center_list.dart';
+import 'package:animated_center_item_list_view/animated_center_item_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -7,7 +7,7 @@ void main() {
     // Create a CenterAnimatedList with a known item count
     await tester.pumpWidget(MaterialApp(
       home: Scaffold(
-        body: AnimatedCenterList(
+        body: AnimatedCenterItemListView(
           itemCount: 10,
           itemBuilder: (BuildContext context, int index, bool isCentered) {
             return ListTile(
