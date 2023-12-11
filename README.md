@@ -1,39 +1,59 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# animated_center_list
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Description
+`animated_center_list` is a Flutter package designed to enhance the visual appeal of list views. It focuses on providing a smooth, animated experience where the central item of the list is highlighted as users scroll through. This package is perfect for use cases where the central item needs to stand out, such as in a carousel or a selection wheel.
 
 ## Features
+- **Center-Focused Animation**: Dynamically animate list items as they move towards or away from the center.
+- **Customizable Animations**: Choose from a range of animations and customize duration and curve to suit your app’s style.
+- **Easy to Use**: Designed to be dropped into any existing Flutter project with minimal setup.
+- **Responsive and Versatile**: Works great on both mobile and web platforms, adapting to various screen sizes.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Getting Started
 
-## Getting started
+### Installation
+To use `animated_center_list` in your Flutter app, add it to your dependencies:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+  animated_center_list: ^1.0.0
 
-## Usage
+Basic Usage
+Here's how you can integrate animated_center_list into your app:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
 ```
+import 'package:flutter/material.dart';
+import 'package:animated_center_list/animated_center_list.dart';
 
-## Additional information
+void main() => runApp(MyApp());
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+class MyApp extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+title: 'Animated Center List Demo',
+home: MyHomePage(),
+);
+}
+}
+
+class MyHomePage extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(
+title: Text('Animated Center List'),
+),
+body: AnimatedCenterList(
+itemCount: 10,
+itemBuilder: (context, index, isCentered) {
+// isCentered is an extra parameter which will tell us that the widget is centered or not
+
+return Container(color: isCentered? Colors.grey: Colors.transparent,
+child: Text('Item $index')
+);
+},
+),
+);
+}
+}
