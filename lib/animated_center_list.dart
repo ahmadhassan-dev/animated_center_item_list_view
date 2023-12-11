@@ -29,10 +29,10 @@ class AnimatedCenterList extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AnimatedCenterListState createState() => _AnimatedCenterListState();
+  AnimatedCenterListState createState() => AnimatedCenterListState();
 }
 
-class _AnimatedCenterListState extends State<AnimatedCenterList> {
+class AnimatedCenterListState extends State<AnimatedCenterList> {
   final List<GlobalKey> _itemKeys = [];
   int _centerIndex = -1;
 
