@@ -1,6 +1,6 @@
 name: animated_center_item_list_view
 description: Enhance Flutter lists with dynamic center-focused animations for a polished and interactive user experience.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/ahmadhassan-dev/animated_center_item_list_view
 
 environment:
