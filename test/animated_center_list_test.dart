@@ -7,7 +7,7 @@ void main() {
     // Create a CenterAnimatedList with a known item count
     await tester.pumpWidget(MaterialApp(
       home: Scaffold(
-        body: CenterAnimatedList(
+        body: AnimatedCenterList(
           itemCount: 10,
           itemBuilder: (BuildContext context, int index, bool isCentered) {
             return ListTile(

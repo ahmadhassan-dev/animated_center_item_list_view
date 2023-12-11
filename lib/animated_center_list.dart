@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 typedef AnimatedItemBuilder = Widget Function(BuildContext context, int index, bool isCentered);
 
-class CenterAnimatedList extends StatefulWidget {
+class AnimatedCenterList extends StatefulWidget {
   final AnimatedItemBuilder itemBuilder;
   final int itemCount;
   final Axis scrollDirection;
@@ -14,7 +14,7 @@ class CenterAnimatedList extends StatefulWidget {
   final bool shrinkWrap;
   final double? itemExtent;
 
-  const CenterAnimatedList({
+  const AnimatedCenterList({
     Key? key,
     required this.itemBuilder,
     required this.itemCount,
@@ -29,10 +29,10 @@ class CenterAnimatedList extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _CenterAnimatedListState createState() => _CenterAnimatedListState();
+  _AnimatedCenterListState createState() => _AnimatedCenterListState();
 }
 
-class _CenterAnimatedListState extends State<CenterAnimatedList> {
+class _AnimatedCenterListState extends State<AnimatedCenterList> {
   final List<GlobalKey> _itemKeys = [];
   int _centerIndex = -1;
 
