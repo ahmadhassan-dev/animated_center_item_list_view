@@ -68,3 +68,48 @@ class MyHomePage extends StatelessWidget {
   }
 }
 ```
+
+### Customization
+
+- **Animation Type:** You can choose from various animation types like fade, scale, or slide.
+- **Duration and Curve:** Customize the duration and the curve of the animation for each list item.
+
+```dart
+AnimatedCenterList(
+  itemCount: 100,
+  itemBuilder: (context, index, isCentered) {
+    final opacity = isCentered ? 1.0 : 0.5;
+    return Opacity(
+      opacity: opacity,
+      child: Container(
+        color: isCentered ? Colors.grey : Colors.transparent,
+        child: ListTile(
+          title: Text('Item $index'),
+        ),
+      ),
+    );
+  },
+)
+```
+
+Another Example:
+
+```dart
+AnimatedCenterList(
+  itemCount: 100,
+  itemBuilder: (context, index, isCentered) {
+   final scale = isCentered ? 1.2 : 1.0; // Scale up when centered
+   return Transform.scale(
+      scale: scale,
+      child: Container(
+          color: isCentered ? Colors.blue : Colors.transparent,
+          child: ListTile(
+            title: Text('Item $index'),
+          ),
+        ),
+      );
+  },
+)
+```
+
+
