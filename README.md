@@ -2,7 +2,7 @@
 
 ## Description
 
-`animated_center_list` is a Flutter package designed to enhance the visual appeal of list views. It
+`animated_center_item_list_view` is a Flutter package designed to enhance the visual appeal of list views. It
 focuses on providing a smooth, animated experience where the central item of the list is highlighted
 as users scroll through. This package is perfect for use cases where the central item needs to stand
 out, such as in a carousel or a selection wheel.
@@ -21,11 +21,11 @@ out, such as in a carousel or a selection wheel.
 
 ### Installation
 
-To use `animated_center_list` in your Flutter app, add it to your dependencies:
+To use `animated_center_item_list_view` in your Flutter app, add it to your dependencies:
 
 ```yaml
 dependencies:
-  animated_center_list: ^1.0.0
+  animated_center_item_list_view: ^1.0.0
 ```
 
 ### Basic Usage
@@ -34,7 +34,7 @@ Here's how you can integrate animated_center_list into your app:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:animated_center_list/animated_center_item_list_view.dart';
+import 'package:animated_center_item_list_view/animated_center_item_list_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Animated Center List Demo',
+      title: 'Animated Center Item List Demo',
       home: MyHomePage(),
     );
   }
