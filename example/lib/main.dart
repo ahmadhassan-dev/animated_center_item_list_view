@@ -1,5 +1,5 @@
+import 'package:animated_center_item_list_view/animated_center_item_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_center_list/animated_center_item_list_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -105,6 +105,33 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             }
         )
+    );
+  }
+}
+
+
+class CenterItem3DEffect extends StatelessWidget {
+  final Widget child;
+  final bool isCentered;
+
+  const CenterItem3DEffect({
+    Key? key,
+    required this.child,
+    required this.isCentered,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final Matrix4 transform = isCentered
+        ? (Matrix4.identity()
+      ..setEntry(3, 2, 0.001) // Perspective
+      ..rotateY(0)) // Adjust the angle to create a visible 3D effect
+        : Matrix4.identity();
+
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 300),
+      transform: transform,
+      child: child,
     );
   }
 }
